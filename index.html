@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מדריך במתנה: הסיפור שלך הוא המגנט לקליניקה | יפעת רון</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    
+    <title>יפעת רון - הסיפור שלך הוא המגנט לקליניקה שלך</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
     <style>
         /* CSS Reset & Variable Definitions */
         *, *::before, *::after {
@@ -15,13 +12,18 @@
         }
         
         :root {
-            --bg-color: #f4f7f5;          /* רקע פסטל ירוק-חלחולת עדין ורגוע מאוד */
-            --primary-accent: #8fa89b;    /* ירוק מרווה רך */
-            --secondary-accent: #dcae96;  /* אפרסק/טרקוטה רך */
-            --dark-text: #2c3e35;         /* ירוק-פחם כהה וקריא לטקסט */
-            --light-bg: #ffffff;          /* לבן נקי לכרטיסיות */
-            --button-color: #5a7365;      /* צבע כפתור הנעה לפעולה */
-            --button-hover: #465a4e;
+            /* צבע רקע חדש - "חי" יותר (אפרסק רך מאוד, במקום ירוק-אפרפר) */
+            --bg-color: #fff8f5; 
+            
+            /* צבעי הדגשה (רכים, מודרניים, לא צבעוניים מדי) */
+            --primary-accent: #9dc4b1;   /* ירוק מרווה חם יותר */
+            --secondary-accent: #e9c7b8; /* אפרסק רך */
+            --dark-text: #2c3e35;        /* ירוק-פחם כהה וקריא */
+            --light-bg: #ffffff;         /* לבן נקי לכרטיסיות */
+            
+            /* כפתור הנעה לפעולה */
+            --button-color: #6a8c79;     /* ירוק חם ועמוק */
+            --button-hover: #547161;
         }
 
         body {
@@ -57,15 +59,17 @@
             margin-bottom: 30px;
         }
 
-        .badge {
-            display: inline-block;
-            background-color: #e9f0ec;
-            color: var(--button-color);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 10.5pt;
-            font-weight: bold;
-            margin-bottom: 20px;
+        /* שינוי עיצוב שורת המתנה (לא נראה כמו כפתור) */
+        .gift-line {
+            display: block;
+            background-color: transparent; /* ללא רקע מלא */
+            color: var(--button-color); /* משתמש בצבע הירוק */
+            padding: 0;
+            font-size: 11pt;
+            font-weight: 600;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e9efec; /* קו דק ומעודן למטה */
+            padding-bottom: 10px;
         }
 
         h1 {
@@ -83,33 +87,20 @@
             font-weight: 400;
         }
 
-        /* מיקום מעוצב ומוקטן משמעותית לתמונה */
+        /* תמונת פרופיל */
         .image-container {
-            max-width: 320px; /* הגבלת רוחב מקסימלי כדי שהתמונה תהיה קטנה ואלגנטית */
-            margin: 25px auto; /* מרכז את התיבה */
-            background-color: #e2e8e5;
-            border-radius: 50%; /* הופך את התמונה לעגולה ומעודנת, מושלם לפורטרט */
+            max-width: 250px; /* מוקטן מעט לאלגנטיות */
+            margin: 25px auto;
+            border-radius: 50%;
             overflow: hidden;
-            border: 3px solid #ffffff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border: 5px solid #ffffff; /* מסגרת לבנה עבה */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* צל עמוק יותר */
             position: relative;
         }
         
         .image-aspect-ratio {
-            padding-top: 100%; /* יחס של 1:1 - ריבוע/עיגול מושלם */
+            padding-top: 100%;
             position: relative;
-        }
-
-        .image-placeholder-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #6b8276;
-            font-size: 10pt;
-            font-weight: 500;
-            text-align: center;
-            padding: 10px;
         }
 
         .image-container img {
@@ -185,22 +176,27 @@
             font-weight: 500;
         }
 
-        /* איזור הנעה לפעולה */
+        /* איזור הנעה לפעולה (לכפתור) */
         .cta-section {
             text-align: center;
-            background-color: #ffffff;
-            border-radius: 16px;
-            padding: 35px 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            background-color: transparent; /* ללא רקע מסביב */
+            padding: 0;
             margin-bottom: 30px;
         }
 
-        .how-it-works {
-            font-size: 11pt;
-            color: var(--dark-text);
+        /* סגנון לטקסט המודבק (Pasted text.txt) */
+        .guide-explanation {
+            font-size: 11.5pt;
+            color: #4a5d53;
             margin-bottom: 25px;
-            font-weight: 500;
-            line-height: 1.7;
+            line-height: 1.8;
+            text-align: right;
+            padding: 0 10px;
+        }
+
+        .guide-explanation strong {
+            color: var(--dark-text);
+            font-weight: 700;
         }
 
         .btn-whatsapp {
@@ -208,12 +204,12 @@
             background-color: var(--button-color);
             color: #ffffff;
             text-decoration: none;
-            padding: 15px 45px;
-            border-radius: 30px;
-            font-size: 12.5pt;
+            padding: 18px 50px;
+            border-radius: 35px;
+            font-size: 13pt;
             font-weight: 700;
             transition: background-color 0.2s ease, transform 0.1s ease;
-            box-shadow: 0 4px 12px rgba(90, 115, 101, 0.2);
+            box-shadow: 0 6px 15px rgba(106, 140, 121, 0.25);
         }
 
         .btn-whatsapp:hover {
@@ -236,6 +232,7 @@
             border-radius: 16px;
             padding: 30px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            border-bottom: 5px solid var(--secondary-accent); /* פס תחתון בצבע אפרסק */
         }
 
         .about-text {
@@ -256,71 +253,71 @@
 </head>
 <body>
 
-    <div class="top-navbar">
-        יפעת רון - מלווה מטפלות למלא את הקליניקה
-    </div>
+<div class="top-navbar">
+    יפעת רון - מלווה מטפלות למלא את הקליניקה
+</div>
 
-    <div class="container">
+<div class="container">
+    
+    <div class="hero">
+        <span class="gift-line">🎁 מדריך במתנה · זמין להורדה מיידית חינם</span>
         
-        <div class="hero">
-            <div class="badge">🎁 מדריך במתנה · זמין להורדה מיידית חינם</div>
-            <h1>הסיפור שלך הוא המגנט לקליניקה שלך.<br>בואי נגלה אותו יחד.</h1>
-            <div class="subtitle">אם את מרגישה שהחיים שלך "רגילים מדי" בשביל לעלות על במה, או שאת לא בטוחה למי אכפת ממה שיש לך להגיד – המדריך המעשי הזה נכתב במיוחד בשבילך.</div>
-        </div>
-
-        <div class="image-container">
-            <div class="image-aspect-ratio">
-                <span class="image-placeholder-text">📸 תמונת פרופיל<br>(profile.jpg)</span>
-                <img src="profile.jpg" alt="יפעת רון">
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>מה מחכה לך בפנים?</h2>
-            <ul class="steps-list">
-                <li class="step-item">
-                    <div class="step-title">שלב 1 – לגלות את היהלומים</div>
-                    <p class="step-desc">30 שאלות מונחות שיחלצו מתוך סיפור החיים שלך את התובנות שהקהל שלך צמא לשמוע.</p>
-                </li>
-                <li class="step-item">
-                    <div class="step-title">שלב 2 – לעצב את המסר</div>
-                    <p class="step-desc">תבנית עבודה פשוטה ומבנית (בלי להסתבך!) לבניית ההרצאה הראשונה שלך.</p>
-                </li>
-                <li class="step-item">
-                    <div class="step-title">שלב 3 – להעז ולדבר</div>
-                    <p class="step-desc">הכלים המנטליים להתמודדות עם תסמונת המתחזה ("מי אני שאדבר על זה?") ולמעבר בטוח לקדמת הבמה.</p>
-                </li>
-            </ul>
-        </div>
-
-        <div class="quote-box">
-            "הסיפורים שנדמים לנו הכי רגילים ויומיומיים – הם בדיוק אלה שהקהל שלנו הכי צריך לשמוע כדי להרגיש שהוא לא לבד."
-        </div>
-
-        <div class="cta-section">
-            <div class="how-it-works">
-                <strong>איך זה עובד?</strong><br>
-                קליק אחד על הכפתור ← שולחת לי הודעת וואטסאפ אוטומטית (בלי אותיות קטנות) ← המדריך נוחת אצלך בנייד 💜
-            </div>
-            
-            <a href="https://wa.me/972508884468?text=%D7%94%D7%99%D7%99%20%D7%99%D7%A4%D7%A2%D7%AA%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%90%D7%AA%20%D7%94%D7%9E%D7%93%D7%A8%D7%99%D7%9A" class="btn-whatsapp">
-                📱 שלחי לי את המדריך בוואטסאפ
-            </a>
-            
-            <div class="trust-line">
-                *הקליק פותח חלון שיחה ישיר איתי בוואטסאפ לקבלת המדריך*
-            </div>
-        </div>
-
-        <div class="about-section">
-            <h2>קצת עליי</h2>
-            <div class="about-text">
-                <p>אם עוד לא הכרנו נעים מאוד, אני ממש שמחה שאת פה. שמי יפעת ואני מאמנת מטפלות, יועצות ומאמנות לעשות את מה שהן יודעות לעשות הכי טוב ולהרוויח מהשליחות שלהן. אני באה מעולמות של משאבי אנוש, ניהול ועמותות. בעלת תואר שני בחינוך, מאמנת מוסמכת, מאסטר & טריינר NLP.</p>
-                <p>אבל מה שעושה אותי רלוונטית עבורך זה שהייתי בדיוק כמוך, או לפחות ממש דומה. עם הזמן גיליתי שהמתאמנות החביבות עלי הן הקולגות שלי שאני ממש שמחה תמיד לעבוד איתן ולעזור להן. אני מביאה איתי ראייה מערכתית רחבה, הבנה בשיווק וטכנולוגיה וניסיון כמרצה. אני לא מנסה לשנות אותך אלא לעזור לך לבנות את מה שמתאים לתדר שלך.</p>
-            </div>
-        </div>
-
+        <h1>הסיפור שלך הוא המגנט לקליניקה שלך.<br>בואי נגלה אותו יחד.</h1>
+        <div class="subtitle">אם את מרגישה שהחיים שלך "רגילים מדי" בשביל לעלות על במה, או שאת לא בטוחה למי אכפת ממה שיש לך להגיד – המדריך המעשי הזה נכתב במיוחד בשבילך.</div>
     </div>
+
+    <div class="image-container">
+        <div class="image-aspect-ratio">
+            <img src="./profile.jpg" alt="יפעת רון">
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>מה מחכה לך בפנים?</h2>
+        <ul class="steps-list">
+            <li class="step-item">
+                <div class="step-title">שלב 1 – לגלות את היהלומים</div>
+                <p class="step-desc">30 שאלות מונחות שיחלצו מתוך סיפור החיים שלך את התובנות שהקהל שלך צמא לשמוע.</p>
+            </li>
+            <li class="step-item">
+                <div class="step-title">שלב 2 – לעצב את המסר</div>
+                <p class="step-desc">תבנית עבודה פשוטה ומבנית (בלי להסתבך!) לבניית ההרצאה הראשונה שלך.</p>
+            </li>
+            <li class="step-item">
+                <div class="step-title">שלב 3 – להעז ולדבר</div>
+                <p class="step-desc">הכלים המנטליים להתמודדות עם תסמונת המתחזה ("מי אני שאדבר על זה?") ולמעבר בטוח לקדמת הבמה.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="quote-box">
+        "הסיפורים שנדמים לנו הכי רגילים ויומיומיים – הם בדיוק אלה שהקהל שלנו הכי צריך לשמוע כדי להרגיש שהוא לא לבד."
+    </div>
+
+    <div class="cta-section">
+        <div class="guide-explanation">
+            <strong>איך זה עובד?</strong><br>
+            קליק אחד על הכפתור ← שולחת לי הודעת וואטסאפ אוטומטית (בלי אותיות קטנות) ← המדריך נוחת אצלך בנייד 💜
+        </div>
+        
+        <a href="https://wa.me/972508884468?text=%D7%94%D7%99%D7%99%20%D7%99%D7%A4%D7%A2%D7%AA%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%90%D7%AA%20%D7%94%D7%9E%D7%93%D7%A8%D7%99%D7%9A" class="btn-whatsapp">
+            📱 שלחי לי את המדריך בוואטסאפ
+        </a>
+        
+        <div class="trust-line">
+            *הקליק פותח חלון שיחה ישיר איתי בוואטסאפ לקבלת המדריך*
+        </div>
+    </div>
+
+    <div class="about-section">
+        <h2>קצת עליי</h2>
+        <div class="about-text">
+            <p>אם עוד לא הכרנו נעים מאוד, אני ממש שמחה שאת פה. שמי יפעת ואני מאמנת מטפלות, יועצות ומאמנות לעשות את מה שהן יודעות לעשות הכי טוב ולהרוויח מהשליחות שלהן. אני באה מעולמות של משאבי אנוש, ניהול ועמותות. בעלת תואר שני בחינוך, מאמנת מוסמכת, מאסטר & טריינר NLP.</p>
+            <p>אבל מה שעושה אותי רלוונטית עבורך זה שהייתי בדיוק כמוך, או לפחות ממש דומה. עם הזמן גיליתי שהמתאמנות החביבות עלי הן הקולגות שלי שאני ממש שמחה תמיד לעבוד איתן ולעזור להן. אני מביאה איתי ראייה מערכתית רחבה, הבנה בשיווק וטכנולוגיה וניסיון כמרצה. אני לא מנסה לשנות אותך אלא לעזור לך לבנות את מה שמתאים לתדר שלך.</p>
+        </div>
+    </div>
+
+</div>
 
 </body>
 </html>
