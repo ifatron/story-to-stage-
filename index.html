@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מדריך במתנה: הסיפור שלך הוא המגנט לקליניקה | יפעת רון</title>
+    <style>
+        /* CSS Reset & Variable Definitions */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-color: #f7f9f8;          /* רקע פסטל ירוק מרווה-אפרפר עדין */
+            --primary-accent: #8fa89b;    /* ירוק מרווה רך */
+            --secondary-accent: #dcae96;  /* אפרסק/טרקוטה רך */
+            --dark-text: #2c3e35;         /* ירוק-פחם כהה וקריא לטקסט */
+            --light-bg: #ffffff;          /* לבן נקי לכרטיסיות */
+            --button-color: #5a7365;      /* צבע כפתור הנעה לפעולה */
+            --button-hover: #465a4e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--dark-text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* שורת מיתוג עליונה */
+        .top-navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 14pt;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* קונטיינר מרכזי */
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 25px 20px;
+        }
+
+        /* כותרת ראשית ואיזור הירו */
+        .hero {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #e9f0ec;
+            color: var(--button-color);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 11pt;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24pt;
+            color: var(--dark-text);
+            margin: 0 0 10px 0;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        .subtitle {
+            font-size: 13pt;
+            color: #556b60;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        /* מיקום מעוצב לתמונה */
+        .image-container {
+            width: 100%;
+            background-color: #e2e8e5;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 30px 0;
+            text-align: center;
+            border: 2px dashed var(--primary-accent);
+            position: relative;
+        }
+        
+        .image-aspect-ratio {
+            padding-top: 56.25%; /* יחס גובה-רוחב קלאסי של 16:9 */
+            position: relative;
+        }
+
+        .image-placeholder-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #6b8276;
+            font-size: 12pt;
+            font-weight: 500;
+        }
+
+        .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block; /* מוגדר כגלוי ומחפש את הקובץ profile.jpg במאגר */
+        }
+
+        /* כרטיסיית תוכן */
+        .card {
+            background-color: var(--light-bg);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            margin-bottom: 35px;
+            border-right: 5px solid var(--primary-accent);
+        }
+
+        h2 {
+            font-size: 16pt;
+            color: var(--dark-text);
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .steps-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .step-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f0f4f2;
+        }
+
+        .step-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .step-title {
+            font-weight: 700;
+            font-size: 12pt;
+            color: var(--button-color);
+            margin-bottom: 4px;
+        }
+
+        .step-desc {
+            font-size: 11pt;
+            color: #556b60;
+            margin: 0;
+        }
+
+        /* קוביית ציטוט */
+        .quote-box {
+            background-color: #f1f5f3;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            font-style: italic;
+            font-size: 11.5pt;
+            color: #4a5d53;
+            margin: 30px 0;
+            line-height: 1.5;
+        }
+
+        /* איזור הנעה לפעולה */
+        .cta-section {
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 30px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            margin-bottom: 35px;
+        }
+
+        .how-it-works {
+            font-size: 11.5pt;
+            color: var(--dark-text);
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: var(--button-color);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 40px;
+            border-radius: 30px;
+            font-size: 13pt;
+            font-weight: bold;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 4px 12px rgba(90, 115, 101, 0.2);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--button-hover);
+        }
+
+        .btn-whatsapp:active {
+            transform: scale(0.98);
+        }
+
+        .trust-line {
+            font-size: 10pt;
+            color: #7a9184;
+            margin-top: 15px;
+        }
+
+        /* איזור אודות */
+        .about-section {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+        }
+
+        .about-text {
+            font-size: 11pt;
+            color: #4a5d53;
+        }
+
+        .podcast-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--button-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 11pt;
+            border-bottom: 2px solid var(--primary-accent);
+            padding-bottom: 2px;
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .podcast-link:hover {
+            color: var(--button-hover);
+            border-color: var(--button-hover);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-navbar">
+        יפעת רון - מלווה מטפלות למלא את הקליניקה
+    </div>
+
+    <div class="container">
+        
+        <div class="hero">
+            <div class="badge">🎁 מדריך במתנה · זמין להורדה מיידית חינם</div>
+            <h1>הסיפור שלך הוא המגנט לקליניקה שלך.<br>בואי נגלה אותו יחד.</h1>
+            <div class="subtitle">אם את מרגישה שהחיים שלך "רגילים מדי" בשביל לעלות על במה, או שאת לא בטוחה למי אכפת ממה שיש לך להגיד – המדריך המעשי הזה נכתב במיוחד בשבילך.</div>
+        </div>
+
+        <div class="image-container">
+            <div class="image-aspect-ratio">
+                <span class="image-placeholder-text">📸 כאן תופיע התמונה שלך (profile.jpg)</span>
+                <img src="profile.jpg" alt="יפעת רון">
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>מה מחכה לך בפנים?</h2>
+            <ul class="steps-list">
+                <li class="step-item">
+                    <div class="step-title">שלב 1 – לגלות את היהלומים</div>
+                    <p class="step-desc">30 שאלות מונחות שיחלצו מתוך סיפור החיים שלך את התובנות שהקהל שלך צמא לשמוע.</p>
+                </li>
+                <li class="step-item">
+                    <div class="step-title">שלב 2 – לעצב את המסר</div>
+                    <p class="step-desc">תבנית עבודה פשוטה ומבנית (בלי להסתבך!) לבניית ההרצאה הראשונה שלך.</p>
+                </li>
+                <li class="step-item">
+                    <div class="step-title">שלב 3 – להעז ולדבר</div>
+                    <p class="step-desc">הכלים המנטליים להתמודדות עם תסמונת המתחזה ("מי אני שאדבר על זה?") ולמעבר בטוח לקדמת הבמה.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="quote-box">
+            "הסיפורים שנדמים לנו הכי רגילים ויומיומיים – הם בדיוק אלה שהקהל שלנו הכי צריך לשמוע כדי להרגיש שהוא לא לבד."
+        </div>
+
+        <div class="cta-section">
+            <div class="how-it-works">
+                <strong>איך זה עובד?</strong><br>
+                קליק אחד על הכפתור ← שולחת לי הודעת וואטסאפ אוטומטית (בלי אותיות קטנות) ← המדריך נוחת אצלך בנייד 💜
+            </div>
+            
+            <a href="https://wa.me/972508884468?text=%D7%94%D7%99%D7%99%20%D7%99%D7%A4%D7%A2%D7%AA%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%94%20%D7%90%D7%AA%20%D7%94%D7%9E%D7%93%D7%A8%D7%99%D7%9A" class="btn-whatsapp">
+                📱 שלחי לי את המדריך בוואטסאפ
+            </a>
+            
+            <div class="trust-line">
+                *הקליק פותח חלון שיחה ישיר איתי בוואטסאפ לקבלת המדריך*
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>קצת עליי</h2>
+            <div class="about-text">
+                <p>נעים להכיר, אני בעלת תואר שני בניהול מערכות חינוך, מלווה מאמנות ומטפלות בתהליכי שינוי, ומוסמכת כ-NLP Master & Trainer. אחרי שנים בעולמות ניהול האנשים ומשאבי האנוש, הגעתי למסקנה חד משמעית:</p>
+                <p>מטפלות שרוצות למלא את הקליניקה לא צריכות "לפרסם יותר" או להוציא הון על שיווק אגרסיבי. הן פשוט צריכות להעז לדבר את הסיפור שלהן מהמקום הכי מדויק ואותנטי.</p>
+                <p>אני עובדת בעיקר בזום עם נשות טיפול מכל הארץ, מפיקה ומגישה את הפודקאסט <strong>"בעיטה לנוח"</strong> – המקום שבו אנחנו לוקחות נשימה עמוקה, יוצאות מאזור הנוחות, ועושות את הצעד הבא בעסק.</p>
+            </div>
+            
+            <a href="#" class="podcast-link">🎙️ רוצה עוד השראה? האזיני לפודקאסט שלי כאן</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
