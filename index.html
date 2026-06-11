@@ -6,21 +6,17 @@
     <title>יפעת רון - הסיפור שלך הוא המגנט לקליניקה שלך</title>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
     <style>
-        /* CSS Reset & Variable Definitions */
         *, *::before, *::after {
             box-sizing: border-box;
         }
         
         :root {
-            /* פלטת הצבעים המדויקת מתוך הלוגו החדש */
-            --bg-color: #fcfaf7;          /* רקע קרם נקי, חם ויוקרתי */
-            --primary-accent: #2C8A82;    /* טורקיז / ירוק-ים עמוק מהלוגו */
-            --secondary-accent: #528D4D;  /* ירוק עלים צומח מהלוגו */
-            --dark-text: #2c3e35;         /* ירוק-פחם כהה, קריא ורך לטקסט */
-            --light-bg: #ffffff;          /* לבן נקי לכרטיסיות */
-            
-            /* כפתור הנעה לפעולה */
-            --button-color: #2C8A82;      /* כפתור בצבע הטורקיז המרכזי */
+            --bg-color: #fcfaf7;          
+            --primary-accent: #2C8A82;    
+            --secondary-accent: #528D4D;  
+            --dark-text: #2c3e35;         
+            --light-bg: #ffffff;          
+            --button-color: #2C8A82;      
             --button-hover: #1f635d;
         }
 
@@ -33,7 +29,6 @@
             line-height: 1.65;
         }
 
-        /* שורת מיתוג עליונה */
         .top-navbar {
             background-color: #ffffff;
             border-bottom: 1px solid rgba(44, 138, 130, 0.1);
@@ -45,14 +40,12 @@
             color: var(--primary-accent);
         }
 
-        /* קונטיינר מרכזי */
         .container {
             max-width: 650px;
             margin: 0 auto;
             padding: 30px 20px;
         }
 
-        /* קונטיינר ללוגו בראש העמוד */
         .logo-container {
             text-align: center;
             margin-top: 15px;
@@ -60,23 +53,20 @@
         }
 
         .logo-container img {
-            max-width: 180px; /* גודל אלגנטי שלא משתלט על העמוד */
+            max-width: 180px; 
             height: auto;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
         }
 
-        /* כותרת ראשית ואיזור הירו */
         .hero {
             text-align: center;
             margin-bottom: 35px;
         }
 
-        /* שורת המתנה מעודנת - לא נראית כמו כפתור */
         .gift-line {
             display: inline-block;
             background-color: transparent;
-            color: var(--secondary-accent); /* צבע ירוק עלים מהלוגו */
+            color: var(--secondary-accent); 
             padding: 0;
             font-size: 11.5pt;
             font-weight: 600;
@@ -87,7 +77,7 @@
 
         h1 {
             font-size: 24pt;
-            color: var(--primary-accent); /* כותרת בצבע הטורקיז הראשי */
+            color: var(--primary-accent); 
             margin: 0 0 14px 0;
             font-weight: 800;
             line-height: 1.35;
@@ -100,7 +90,6 @@
             font-weight: 400;
         }
 
-        /* תמונת פרופיל עגולה */
         .image-container {
             max-width: 240px;
             margin: 30px auto;
@@ -126,14 +115,13 @@
             display: block; 
         }
 
-        /* כרטיסיית תוכן */
         .card {
             background-color: var(--light-bg);
             border-radius: 16px;
             padding: 30px;
             box-shadow: 0 4px 20px rgba(44, 138, 130, 0.03);
             margin-bottom: 30px;
-            border-right: 5px solid var(--primary-accent); /* פס בצבע הטורקיז הראשי */
+            border-right: 5px solid var(--primary-accent); 
         }
 
         h2 {
@@ -165,7 +153,7 @@
         .step-title {
             font-weight: 700;
             font-size: 11.5pt;
-            color: var(--secondary-accent); /* כותרות השלבים בירוק עלים */
+            color: var(--secondary-accent); 
             margin-bottom: 6px;
         }
 
@@ -175,7 +163,6 @@
             margin: 0;
         }
 
-        /* קוביית ציטוט בהשראת הלוגו */
         .quote-box {
             background-color: #f0f5f3;
             border-radius: 14px;
@@ -191,7 +178,6 @@
             border-right: 3px solid var(--secondary-accent);
         }
 
-        /* איזור הנעה לפעולה */
         .cta-section {
             text-align: center;
             background-color: transparent;
@@ -213,7 +199,6 @@
             font-weight: 700;
         }
 
-        /* כפתור וואטסאפ מעוצב */
         .btn-whatsapp {
             display: inline-block;
             background-color: var(--button-color);
@@ -241,13 +226,12 @@
             margin-top: 15px;
         }
 
-        /* איזור אודות */
         .about-section {
             background-color: #ffffff;
             border-radius: 16px;
             padding: 30px;
             box-shadow: 0 4px 20px rgba(44, 138, 130, 0.03);
-            border-bottom: 5px solid var(--secondary-accent); /* פס תחתון בירוק עלים */
+            border-bottom: 5px solid var(--secondary-accent); 
         }
 
         .about-text {
@@ -269,4 +253,73 @@
 <body>
 
 <div class="top-navbar">
-    יפעת רון - מלווה מטפלות ומאמנות למלא את הקליני
+    יפעת רון - מלווה מטפלות ומאמנות למלא את הקליניקה
+</div>
+
+<div class="container">
+    
+    <div class="logo-container">
+        <img src="./logo.jpg" alt="לוגו יפעת רון">
+    </div>
+    
+    <div class="hero">
+        <span class="gift-line">🎁 מדריך במתנה · זמין להורדה מיידית חינם</span>
+        <h1>הסיפור שלך הוא המגנט לקליניקה שלך.<br>בואי נגלה אותו יחד.</h1>
+        <div class="subtitle">אם את מרגישה שהחיים שלך "רגילים מדי" בשביל לעלות על במה, או שאת לא בטוחה למי אכפת ממה שיש לך להגיד – המדריך המעשי הזה נכתב במיוחד בשבילך.</div>
+    </div>
+
+    <div class="image-container">
+        <div class="image-aspect-ratio">
+            <img src="./profile.jpg" alt="יפעת רון">
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>מה מחכה לך בפנים?</h2>
+        <ul class="steps-list">
+            <li class="step-item">
+                <div class="step-title">שלב 1 – לגלות את היהלומים</div>
+                <p class="step-desc">30 שאלות מונחות שיחלצו מתוך סיפור החיים שלך את התובנות שהקהל שלך צמא לשמוע.</p>
+            </li>
+            <li class="step-item">
+                <div class="step-title">שלב 2 – לעצב את המסר</div>
+                <p class="step-desc">תבנית עבודה פשוטה ומבנית (בלי להסתבך!) לבניית ההרצאה הראשונה שלך.</p>
+            </li>
+            <li class="step-item">
+                <div class="step-title">שלב 3 – להעז ולדבר</div>
+                <p class="step-desc">הכלים המנטליים להתמודדות עם תסמונת המתחזה ("מי אני שאדבר על זה?") ולמעבר בטוח לקדמת הבמה.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="quote-box">
+        "הסיפורים שנדמים לנו הכי רגילים ויומיומיים – הם בדיוק אלה שהקהל שלנו הכי צריך לשמוע כדי להרגיש שהוא לא לבד."
+    </div>
+
+    <div class="cta-section">
+        <div class="guide-explanation">
+            <strong>איך זה עובד?</strong><br>
+            קליק אחד על הכפתור ← שולחת לי הודעת וואטסאפ אוטומטית (בלי אותיות קטנות) ← המדריך נוחת אצלך בנייד 💜
+        </div>
+        
+        <a href="https://wa.me/972508884468?text=%D7%94%D7%99%D7%99%20%D7%99%D7%A4%D7%A2%D7%AA%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%90%D7%AA%20%D7%94%D7%9E%D7%93%D7%A8%D7%99%D7%9A" class="btn-whatsapp">
+            📱 שלחי לי את המדריך בוואטסאפ
+        </a>
+        
+        <div class="trust-line">
+            *הקליק פותח חלון שיחה ישיר איתי בוואטסאפ לקבלת המדריך*
+        </div>
+    </div>
+
+    <div class="about-section">
+        <h2>קצת עליי</h2>
+        <div class="about-text">
+            <p>אם עוד לא הכרנו נעים מאוד, אני ממש שמחה שאת פה. שמי יפעת ואני מאמנת מטפלות, יועצות ומאמנות לעשות את מה שהן יודעות לעשות הכי טוב ולהרוויח מהשליחות שלהן. אני באה מעולמות של משאבי אנוש, ניהול ועמותות. בעלת תואר שני בחינוך, מאמנת מוסמכת, מאסטר & טריינר NLP.</p>
+            <p>אבל מה שעושה אותי רלוונטית עבורך זה שהייתי בדיוק כמוך, או לפחות ממש דומה. עם הזמן גיליתי שהמתאמנות החביבות עלי הן הקולגות שלי שאני ממש שמחה תמיד לעבוד איתן ולעזור להן. אני מביאה איתי ראייה מערכתית רחבה, הבנה בשיווק וטכנולוגיה וניסיון כמרצה. אני לא מנסה לשנות אותך אלא לעזור לך לבנות את מה שמתאים לתדר שלך.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
