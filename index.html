@@ -52,7 +52,6 @@
             margin-bottom: 35px;
         }
 
-        /* עיצוב משולב ונקי לחלוטין לשורת המידע - צבע מעודן וללא קו תחתון */
         .gift-line {
             display: inline-block;
             background-color: transparent;
@@ -135,3 +134,211 @@
             padding-bottom: 0;
             border-bottom: none;
         }
+
+        .step-title {
+            font-weight: 700;
+            font-size: 11.5pt;
+            color: var(--secondary-accent); 
+            margin-bottom: 6px;
+        }
+
+        .step-desc {
+            font-size: 11pt;
+            color: #556b60;
+        }
+
+        .testimonials-section {
+            margin-bottom: 30px;
+            text-align: right;
+        }
+
+        .testimonial-card {
+            background-color: var(--light-bg);
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(44, 138, 130, 0.02);
+            border-right: 3px solid var(--secondary-accent);
+        }
+
+        .testimonial-text {
+            font-size: 11pt;
+            font-style: italic;
+            color: #3b4e44;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-size: 10.5pt;
+            font-weight: 700;
+            color: var(--primary-accent);
+        }
+
+        .quote-box {
+            background-color: #f0f5f3;
+            border-radius: 14px;
+            padding: 24px;
+            text-align: center;
+            font-style: italic;
+            font-size: 11.5pt;
+            color: #3b4e44;
+            margin: 35px 0;
+            line-height: 1.65;
+            font-weight: 500;
+            border-left: 3px solid var(--secondary-accent);
+            border-right: 3px solid var(--secondary-accent);
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .guide-explanation {
+            font-size: 11.5pt;
+            color: #4a5d53;
+            margin-bottom: 25px;
+            line-height: 1.8;
+            text-align: right;
+            padding: 0 10px;
+        }
+
+        .guide-explanation strong {
+            color: var(--primary-accent);
+            font-weight: 700;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: var(--button-color);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 18px 50px;
+            border-radius: 35px;
+            font-size: 13pt;
+            font-weight: 700;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 6px 20px rgba(44, 138, 130, 0.2);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--button-hover);
+        }
+
+        .btn-whatsapp:active {
+            transform: scale(0.98);
+        }
+
+        .trust-line {
+            font-size: 9.5pt;
+            color: #7a9184;
+            margin-top: 15px;
+        }
+
+        .about-section {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(44, 138, 130, 0.03);
+            border-bottom: 5px solid var(--secondary-accent); 
+            text-align: right;
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+        }
+        
+        .about-text p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-navbar">
+    יפעת רון - מלווה מטפלות ומאמנות למלא את הקליניקה
+</div>
+
+<div class="container">
+    
+    <div class="hero">
+        <span class="gift-line">מדריך במתנה · זמין עכשיו בחינם</span>
+        <h1>הסיפור שלך הוא המגנט לקליניקה שלך.<br>בואי נגלה אותו יחד.</h1>
+        <div class="subtitle">אם את מרגישה שהחיים שלך "רגילים מדי" בשביל לעלות על במה, או שאת לא בטוחה למי אכפת ממה שיש לך להגיד – המדריך המעשי הזה נכתב במיוחד בשבילך.</div>
+    </div>
+
+    <div class="image-container">
+        <div class="image-aspect-ratio">
+            <img src="./profile.jpg" alt="יפעת רון">
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>מה מחכה לך בפנים?</h2>
+        <ul class="steps-list">
+            <li class="step-item">
+                <div class="step-title">שלב 1 – לגלות את היהלומים</div>
+                <p class="step-desc">30 שאלות מונחות שיחלצו מתוך סיפור החיים שלך את התובנות שהקהל שלך צמא לשמוע.</p>
+            </li>
+            <li class="step-item">
+                <div class="step-title">שלב 2 – לעצב את המסר</div>
+                <p class="step-desc">תבנית עבודה פשוטה ומבנית (בלי להסתבך!) לבניית ההרצאה הראשונה שלך.</p>
+            </li>
+            <li class="step-item">
+                <div class="step-title">שלב 3 – להעז ולדבר</div>
+                <p class="step-desc">הכלים המנטליים להתמודדות עם תסמונת המתחזה ("מי אני שאדבר על זה?") ולמעבר בטוח לקדמת הבמה.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="testimonials-section">
+        <h2>מה הן מספרות...</h2>
+        
+        <div class="testimonial-card">
+            <p class="testimonial-text">"תמיד הרגשתי שהסיפור שלי רגיל לחלוטין ושאין לי מה לחדש. הליווי של יפעת נתן לי את הביטחון להעז לעלות על במה ולדבר."</p>
+            <div class="testimonial-author">— נירה</div>
+        </div>
+
+        <div class="testimonial-card">
+            <p class="testimonial-text">"הייתי תקועה המון זמן עם 'תסמונת המתחזה' והרבה סימני שאלה. יפעת פירקה לי את הכל למשימות פשוטות, בלי להסתבך. בזכותה הפסקתי להתחבא מאחורי המקלדת."</p>
+            <div class="testimonial-author">— רוית</div>
+        </div>
+
+        <div class="testimonial-card">
+            <p class="testimonial-text">"יפעת עזרה לי לדייק את המסר שלי, והיום אני במקום אחר."</p>
+            <div class="testimonial-author">— דנה</div>
+        </div>
+    </div>
+
+    <div class="quote-box">
+        "הסיפורים שנדמים לנו הכי רגילים ויומיומיים – הם בדיוק אלה שהקהל שלנו הכי צריך לשמוע כדי להרגיש שהוא לא לבד."
+    </div>
+
+    <div class="cta-section">
+        <div class="guide-explanation">
+            <strong>איך זה עובד?</strong><br>
+            קליק אחד על הכפתור ← שולחת לי הודעת וואטסאפ אוטומטית (בלי אותיות קטנות) ← המדריך נוחת אצלך בנייד 💜
+        </div>
+        
+        <a href="https://wa.me/972508884468?text=%D7%94%D7%99%D7%99%20%D7%99%D7%A4%D7%A2%D7%AA%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%90%D7%AA%20%D7%94%D7%9E%D7%93%D7%A8%D7%99%D7%9A" class="btn-whatsapp">
+            📱 שלחי לי את המדריך בוואטסאפ
+        </a>
+        
+        <div class="trust-line">
+            *הקליק פותח חלון שיחה ישיר איתי בוואטסאפ לקבלת המדריך*
+        </div>
+    </div>
+
+    <div class="about-section">
+        <h2>קצת עליי</h2>
+        <div class="about-text">
+            <p>אם עוד לא הכרנו נעים מאוד, אני ממש שמחה שאת פה. שמי יפעת ואני מאמנת מטפלות, יועצות ומאמנות לעשות את מה שהן יודעות לעשות הכי טוב ולהרוויח מהשליחות שלהן. אני באה מעולמות של משאבי אנוש, ניהול ועמותות. בעלת תואר שני בחינוך, מאמנת מוסמכת, מאסטר & טריינר NLP.</p>
+            <p>אבל מה שעושה אותי רלוונטית עבורך זה שהייתי בדיוק כמוך, או לפחות ממש דומה. עם הזמן גיליתי שהמתאמנות החביבות עלי הן הקולגות שלי שאני ממש שמחה תמיד לעבוד איתן ולעזור להן. אני מביאה איתי ראייה מערכתית רחבה, הבנה בשיווק וטכנולוגיה וניסיון כמרצה. אני לא מנסה לשנות אותך אלא לעזור לך לבנות את מה שמתאים לתדר שלך.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
