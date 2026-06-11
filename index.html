@@ -12,18 +12,16 @@
         }
         
         :root {
-            /* צבע רקע חדש - "חי" יותר (אפרסק רך מאוד, במקום ירוק-אפרפר) */
-            --bg-color: #fff8f5; 
-            
-            /* צבעי הדגשה (רכים, מודרניים, לא צבעוניים מדי) */
-            --primary-accent: #9dc4b1;   /* ירוק מרווה חם יותר */
-            --secondary-accent: #e9c7b8; /* אפרסק רך */
-            --dark-text: #2c3e35;        /* ירוק-פחם כהה וקריא */
-            --light-bg: #ffffff;         /* לבן נקי לכרטיסיות */
+            /* פלטת הצבעים המדויקת מתוך הלוגו החדש */
+            --bg-color: #fcfaf7;          /* רקע קרם נקי, חם ויוקרתי */
+            --primary-accent: #2C8A82;    /* טורקיז / ירוק-ים עמוק מהלוגו */
+            --secondary-accent: #528D4D;  /* ירוק עלים צומח מהלוגו */
+            --dark-text: #2c3e35;         /* ירוק-פחם כהה, קריא ורך לטקסט */
+            --light-bg: #ffffff;          /* לבן נקי לכרטיסיות */
             
             /* כפתור הנעה לפעולה */
-            --button-color: #6a8c79;     /* ירוק חם ועמוק */
-            --button-hover: #547161;
+            --button-color: #2C8A82;      /* כפתור בצבע הטורקיז המרכזי */
+            --button-hover: #1f635d;
         }
 
         body {
@@ -38,12 +36,13 @@
         /* שורת מיתוג עליונה */
         .top-navbar {
             background-color: #ffffff;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(44, 138, 130, 0.1);
             padding: 14px 20px;
             text-align: center;
             font-size: 13pt;
             font-weight: 600;
             letter-spacing: 0.5px;
+            color: var(--primary-accent);
         }
 
         /* קונטיינר מרכזי */
@@ -53,48 +52,62 @@
             padding: 30px 20px;
         }
 
+        /* קונטיינר ללוגו בראש העמוד */
+        .logo-container {
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        .logo-container img {
+            max-width: 180px; /* גודל אלגנטי שלא משתלט על העמוד */
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
         /* כותרת ראשית ואיזור הירו */
         .hero {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
-        /* שינוי עיצוב שורת המתנה (לא נראה כמו כפתור) */
+        /* שורת המתנה מעודנת - לא נראית כמו כפתור */
         .gift-line {
-            display: block;
-            background-color: transparent; /* ללא רקע מלא */
-            color: var(--button-color); /* משתמש בצבע הירוק */
+            display: inline-block;
+            background-color: transparent;
+            color: var(--secondary-accent); /* צבע ירוק עלים מהלוגו */
             padding: 0;
-            font-size: 11pt;
+            font-size: 11.5pt;
             font-weight: 600;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #e9efec; /* קו דק ומעודן למטה */
-            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eef3f0;
+            padding-bottom: 8px;
         }
 
         h1 {
             font-size: 24pt;
-            color: var(--dark-text);
-            margin: 0 0 12px 0;
+            color: var(--primary-accent); /* כותרת בצבע הטורקיז הראשי */
+            margin: 0 0 14px 0;
             font-weight: 800;
             line-height: 1.35;
         }
 
         .subtitle {
             font-size: 12.5pt;
-            color: #556b60;
+            color: #4a5d53;
             margin-top: 15px;
             font-weight: 400;
         }
 
-        /* תמונת פרופיל */
+        /* תמונת פרופיל עגולה */
         .image-container {
-            max-width: 250px; /* מוקטן מעט לאלגנטיות */
-            margin: 25px auto;
+            max-width: 240px;
+            margin: 30px auto;
             border-radius: 50%;
             overflow: hidden;
-            border: 5px solid #ffffff; /* מסגרת לבנה עבה */
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* צל עמוק יותר */
+            border: 5px solid #ffffff;
+            box-shadow: 0 8px 24px rgba(44, 138, 130, 0.08);
             position: relative;
         }
         
@@ -118,16 +131,16 @@
             background-color: var(--light-bg);
             border-radius: 16px;
             padding: 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            box-shadow: 0 4px 20px rgba(44, 138, 130, 0.03);
             margin-bottom: 30px;
-            border-right: 5px solid var(--primary-accent);
+            border-right: 5px solid var(--primary-accent); /* פס בצבע הטורקיז הראשי */
         }
 
         h2 {
             font-size: 15pt;
-            color: var(--dark-text);
+            color: var(--primary-accent);
             margin-top: 0;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             font-weight: 700;
         }
 
@@ -140,7 +153,7 @@
         .step-item {
             margin-bottom: 20px;
             padding-bottom: 15px;
-            border-bottom: 1px solid #f0f4f2;
+            border-bottom: 1px solid #f4f7f5;
         }
 
         .step-item:last-child {
@@ -152,8 +165,8 @@
         .step-title {
             font-weight: 700;
             font-size: 11.5pt;
-            color: var(--button-color);
-            margin-bottom: 4px;
+            color: var(--secondary-accent); /* כותרות השלבים בירוק עלים */
+            margin-bottom: 6px;
         }
 
         .step-desc {
@@ -162,29 +175,30 @@
             margin: 0;
         }
 
-        /* קוביית ציטוט */
+        /* קוביית ציטוט בהשראת הלוגו */
         .quote-box {
-            background-color: #ebf0ed;
-            border-radius: 12px;
-            padding: 22px;
+            background-color: #f0f5f3;
+            border-radius: 14px;
+            padding: 24px;
             text-align: center;
             font-style: italic;
-            font-size: 11pt;
-            color: #4a5d53;
-            margin: 30px 0;
-            line-height: 1.6;
+            font-size: 11.5pt;
+            color: #3b4e44;
+            margin: 35px 0;
+            line-height: 1.65;
             font-weight: 500;
+            border-left: 3px solid var(--secondary-accent);
+            border-right: 3px solid var(--secondary-accent);
         }
 
-        /* איזור הנעה לפעולה (לכפתור) */
+        /* איזור הנעה לפעולה */
         .cta-section {
             text-align: center;
-            background-color: transparent; /* ללא רקע מסביב */
+            background-color: transparent;
             padding: 0;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
-        /* סגנון לטקסט המודבק (Pasted text.txt) */
         .guide-explanation {
             font-size: 11.5pt;
             color: #4a5d53;
@@ -195,10 +209,11 @@
         }
 
         .guide-explanation strong {
-            color: var(--dark-text);
+            color: var(--primary-accent);
             font-weight: 700;
         }
 
+        /* כפתור וואטסאפ מעוצב */
         .btn-whatsapp {
             display: inline-block;
             background-color: var(--button-color);
@@ -209,7 +224,7 @@
             font-size: 13pt;
             font-weight: 700;
             transition: background-color 0.2s ease, transform 0.1s ease;
-            box-shadow: 0 6px 15px rgba(106, 140, 121, 0.25);
+            box-shadow: 0 6px 20px rgba(44, 138, 130, 0.2);
         }
 
         .btn-whatsapp:hover {
@@ -231,8 +246,8 @@
             background-color: #ffffff;
             border-radius: 16px;
             padding: 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-            border-bottom: 5px solid var(--secondary-accent); /* פס תחתון בצבע אפרסק */
+            box-shadow: 0 4px 20px rgba(44, 138, 130, 0.03);
+            border-bottom: 5px solid var(--secondary-accent); /* פס תחתון בירוק עלים */
         }
 
         .about-text {
@@ -254,70 +269,4 @@
 <body>
 
 <div class="top-navbar">
-    יפעת רון - מלווה מטפלות למלא את הקליניקה
-</div>
-
-<div class="container">
-    
-    <div class="hero">
-        <span class="gift-line">🎁 מדריך במתנה · זמין להורדה מיידית חינם</span>
-        
-        <h1>הסיפור שלך הוא המגנט לקליניקה שלך.<br>בואי נגלה אותו יחד.</h1>
-        <div class="subtitle">אם את מרגישה שהחיים שלך "רגילים מדי" בשביל לעלות על במה, או שאת לא בטוחה למי אכפת ממה שיש לך להגיד – המדריך המעשי הזה נכתב במיוחד בשבילך.</div>
-    </div>
-
-    <div class="image-container">
-        <div class="image-aspect-ratio">
-            <img src="./profile.jpg" alt="יפעת רון">
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>מה מחכה לך בפנים?</h2>
-        <ul class="steps-list">
-            <li class="step-item">
-                <div class="step-title">שלב 1 – לגלות את היהלומים</div>
-                <p class="step-desc">30 שאלות מונחות שיחלצו מתוך סיפור החיים שלך את התובנות שהקהל שלך צמא לשמוע.</p>
-            </li>
-            <li class="step-item">
-                <div class="step-title">שלב 2 – לעצב את המסר</div>
-                <p class="step-desc">תבנית עבודה פשוטה ומבנית (בלי להסתבך!) לבניית ההרצאה הראשונה שלך.</p>
-            </li>
-            <li class="step-item">
-                <div class="step-title">שלב 3 – להעז ולדבר</div>
-                <p class="step-desc">הכלים המנטליים להתמודדות עם תסמונת המתחזה ("מי אני שאדבר על זה?") ולמעבר בטוח לקדמת הבמה.</p>
-            </li>
-        </ul>
-    </div>
-
-    <div class="quote-box">
-        "הסיפורים שנדמים לנו הכי רגילים ויומיומיים – הם בדיוק אלה שהקהל שלנו הכי צריך לשמוע כדי להרגיש שהוא לא לבד."
-    </div>
-
-    <div class="cta-section">
-        <div class="guide-explanation">
-            <strong>איך זה עובד?</strong><br>
-            קליק אחד על הכפתור ← שולחת לי הודעת וואטסאפ אוטומטית (בלי אותיות קטנות) ← המדריך נוחת אצלך בנייד 💜
-        </div>
-        
-        <a href="https://wa.me/972508884468?text=%D7%94%D7%99%D7%99%20%D7%99%D7%A4%D7%A2%D7%AA%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%90%D7%AA%20%D7%94%D7%9E%D7%93%D7%A8%D7%99%D7%9A" class="btn-whatsapp">
-            📱 שלחי לי את המדריך בוואטסאפ
-        </a>
-        
-        <div class="trust-line">
-            *הקליק פותח חלון שיחה ישיר איתי בוואטסאפ לקבלת המדריך*
-        </div>
-    </div>
-
-    <div class="about-section">
-        <h2>קצת עליי</h2>
-        <div class="about-text">
-            <p>אם עוד לא הכרנו נעים מאוד, אני ממש שמחה שאת פה. שמי יפעת ואני מאמנת מטפלות, יועצות ומאמנות לעשות את מה שהן יודעות לעשות הכי טוב ולהרוויח מהשליחות שלהן. אני באה מעולמות של משאבי אנוש, ניהול ועמותות. בעלת תואר שני בחינוך, מאמנת מוסמכת, מאסטר & טריינר NLP.</p>
-            <p>אבל מה שעושה אותי רלוונטית עבורך זה שהייתי בדיוק כמוך, או לפחות ממש דומה. עם הזמן גיליתי שהמתאמנות החביבות עלי הן הקולגות שלי שאני ממש שמחה תמיד לעבוד איתן ולעזור להן. אני מביאה איתי ראייה מערכתית רחבה, הבנה בשיווק וטכנולוגיה וניסיון כמרצה. אני לא מנסה לשנות אותך אלא לעזור לך לבנות את מה שמתאים לתדר שלך.</p>
-        </div>
-    </div>
-
-</div>
-
-</body>
-</html>
+    יפעת רון - מלווה מטפלות ומאמנות למלא את הקליני
